@@ -15,11 +15,11 @@
   ],
   "devDependencies": {
     "istanbul-harmony": "0",
-    "koa": "0",
-    "should": "3",
+    "koa": "^2.0.0-alpha.3",
+    "koa-etag": "git+ssh://git@github.com/omsmith/etag.git#koa2",
     "mocha": "1",
-    "supertest": "0",
-    "koa-etag": "1"
+    "should": "3",
+    "supertest": "0"
   },
   "license": "MIT",
   "dependencies": {},
