@@ -14,8 +14,8 @@ $ npm install koa-conditional-get
 ```js
 var conditional = require('koa-conditional-get');
 var etag = require('koa-etag');
-var koa = require('koa');
-var app = koa();
+var Koa = require('koa');
+var app = new Koa();
 
 // use it upstream from etag so
 // that they are present
@@ -28,10 +28,8 @@ app.use(etag());
 
 // respond
 
-app.use(function *(next){
-  yield next;
-
-  this.body = {
+app.use(ctx => {
+  ctx.body = {
     name: 'tobi',
     species: 'ferret',
     age: 2
